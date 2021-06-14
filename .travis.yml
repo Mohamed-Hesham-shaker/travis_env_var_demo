@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t app .
+  - docker build -t app --build-arg FAVORITE_FOOD=${FAVORITE_FOOD} .
   - docker tag app mohamedh2011/app:latest
 
 after_success:
